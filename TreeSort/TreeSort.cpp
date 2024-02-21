@@ -19,7 +19,7 @@ Node* insert(Node* root, int key)
         return new Node(key);
     }
 
-    if (key <= root->key) 
+    if (key < root->key) 
     {
         root->left = insert(root->left, key);
     }
@@ -68,7 +68,7 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    int arr[] = { 5, 3, 2, 4, 7, 6, 8, 3, 4,9 };
+    int arr[] = { 5, 3, 2, 4, 7, 6, 8, 3, 4, 9 };
     const int size = sizeof(arr) / sizeof(arr[0]);
     Node* root = nullptr;
     root = createTree(arr, size, root);
